@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniMaxAD - SEO優化開発・SNS運営代行・Google広告代投放</title>
+    <meta name="description" content="MiniMaxAD - SEO優化開発、SNS運営代行、Google広告代投放のプロフェッショナル。最大の成果を、最小のコストで実現します。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-orange': '#FF6B6B',
+                        'primary-teal': '#4ECDC4',
+                        'secondary-cream': '#FFF5E6',
+                        'secondary-yellow': '#FFD166',
+                    },
+                    fontFamily: {
+                        'noto': ['Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.6;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">M</span>
+                    </div>
+                    <span class="text-xl font-bold text-gray-800">MiniMaxAD</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">ホーム</a>
+                    <a href="services.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">サービス</a>
+                    <a href="works.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">実績</a>
+                    <a href="pricing.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">料金</a>
+                    <a href="about.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">会社概要</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">お問い合わせ</a>
+                    <a href="quote.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">見積もり</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="quote.html" class="bg-secondary-yellow text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-yellow-400 transition-colors duration-300 shadow-lg hover:shadow-xl">
+                        見積もり依頼
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="md:hidden" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden py-4 border-t hidden">
+                <nav class="flex flex-col space-y-4">
+                    <a href="#home" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">ホーム</a>
+                    <a href="services.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">サービス</a>
+                    <a href="works.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">実績</a>
+                    <a href="pricing.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">料金</a>
+                    <a href="about.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">会社概要</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">お問い合わせ</a>
+                    <a href="quote.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">見積もり</a>
+                    <a href="quote.html" class="bg-secondary-yellow text-gray-800 px-6 py-3 rounded-lg font-medium text-center mt-4">見積もり依頼</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative overflow-hidden bg-gradient-to-br from-secondary-cream to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div class="space-y-8">
+                    <div class="space-y-4">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                            <span class="text-gradient">最大の成果</span>を<br>最小のコストで
+                        </h1>
+                        <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
+                            MiniMaxADは、SEO優化開発、SNS運用代行、Google広告の運用代行で、効率的にビジネスを成長させます
+                        </p>
+                    </div>
+
+
+
+                    <!-- CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="quote.html" class="bg-secondary-yellow text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-yellow-400 transition-colors duration-300 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2">
+                            <span>見積もり依頼</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                        <a href="contact.html" class="bg-primary-teal text-white px-6 py-3 rounded-lg font-medium hover:bg-teal-600 transition-colors duration-300 flex items-center justify-center space-x-2">
+                            <span>お問い合わせ</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Content -->
+                <div class="relative">
+                    <div class="relative z-10">
+                        <div class="bg-white rounded-2xl shadow-2xl p-8 animate-float">
+                            <div class="space-y-6">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-12 h-12 bg-primary-orange rounded-lg flex items-center justify-center">
+                                        <svg class="text-white w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-800">SEO順位向上</h3>
+                                        <p class="text-gray-600 text-sm">検索エンジン最適化</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-12 h-12 bg-primary-teal rounded-lg flex items-center justify-center">
+                                        <svg class="text-white w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-800">SNS運営代行</h3>
+                                        <p class="text-gray-600 text-sm">プロフェッショナル運営</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-12 h-12 bg-secondary-yellow rounded-lg flex items-center justify-center">
+                                        <svg class="text-white w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="font-semibold text-gray-800">Google広告の運用代行</h3>
+                                        <p class="text-gray-600 text-sm">確実な成果を実現します</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Background Elements -->
+                    <div class="absolute top-4 right-4 w-32 h-32 bg-primary-orange opacity-10 rounded-full animate-bounce"></div>
+                    <div class="absolute bottom-4 left-4 w-24 h-24 bg-primary-teal opacity-10 rounded-full animate-bounce" style="animation-delay: 1s;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span class="text-gradient">サービス</span>
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    SEO優化開発から社交媒体運営まで、デジタルマーケティングの全領域をカバーする包括的なサービスを提供します。
+                </p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- SEO Service -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden card-hover">
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-primary-orange rounded-lg flex items-center justify-center mb-6">
+                            <svg class="text-white w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                            </svg>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">SEO優化開発</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Googleアルゴリズムに最適化されたSEO戦略で、検索順位を向上させます。
+                        </p>
+                        
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-sm text-gray-600">
+                                <div class="w-2 h-2 bg-primary-orange rounded-full mr-3"></div>
+                                キーワード分析
+                            </li>
+                            <li class="flex items-center text-sm text-gray-600">
+                                <div class="w-2 h-2 bg-primary-orange rounded-full mr-3"></div>
+                                コンテンツ最適化
+                            </li>
+                            <li class="flex items-center text-sm text-gray-600">
+                                <div class="w-2 h-2 bg-primary-orange rounded-full mr-3"></div>
+                                テクニカルSEO
+                            </li>
+                            <li class="flex items-center text-sm text-gray-600">
+                                <div class="w-2 h-2 bg-primary-orange rounded-full mr-3"></div>
+                                レポート分析
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="px-8 pb-8">
+                        <a href="services.html#seo" class="block w-full py-3 bg-primary-orange hover:bg-red-500 text-white rounded-lg transition-colors duration-300 font-medium text-center">
+                            詳細を見る
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Instagram Service -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden card-hover">
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-primary-teal rounded-lg flex items-center justify-center mb-6">
+                            <svg class="text-white w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">SNS運用代行</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Instagram、TikTokなど各種SNSプラットフォームでブランドイメージに合わせたコンテンツ制作と戦略的な運営を行います。
+                        </p>
+                        
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-sm text-gray-600">
+                                <div class="w-2 h-2 bg-primary-orange rounded-full mr-3"></div>
+                                Instagram・TikTok運営
+                            </li>
+                            <li class="flex items-center text-sm text-gray-600">
+                                <div class="w-2 h-2 bg-primary-orange rounded-full mr-3"></div>
+                                コンテンツ企画・制作
+                            </li>
+                            <li class="flex items-center text-sm text-gray-600">
+                                <div class="w-2 h-2 bg-primary-orange rounded-full mr-3"></div>
+                                ハッシュタグ戦略
+                            </li>
+                            <li class="flex items-center text-sm text-gray-600">
+                                <div class="w-2 h-2 bg-primary-orange rounded-full mr-3"></div>
+                                エンゲージメント向上
+                            </li>
+                        </ul>
+
+                        <a href="services.html#sns" class="block w-full py-3 bg-primary-teal hover:bg-teal-600 text-white rounded-lg transition-colors duration-300 font-medium text-center">
+                            詳細を見る
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Google Ads Service -->
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden card-hover">
+                    <div class="p-8">
+                        <div class="w-16 h-16 bg-secondary-yellow rounded-lg flex items-center justify-center mb-6">
+                            <svg class="text-white w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/>
+                            </svg>
+                        </div>
+
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Google広告の運用代行</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Google検索広告、ディスプレイ広告、YouTube広告など、効果的な広告運用で確実な成果を実現します。
+                        </p>
+
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-sm text-gray-600">
+                                <div class="w-2 h-2 bg-primary-orange rounded-full mr-3"></div>
+                                Google検索広告
+                            </li>
+                            <li class="flex items-center text-sm text-gray-600">
+                                <div class="w-2 h-2 bg-primary-orange rounded-full mr-3"></div>
+                                ディスプレイ広告
+                            </li>
+                            <li class="flex items-center text-sm text-gray-600">
+                                <div class="w-2 h-2 bg-primary-orange rounded-full mr-3"></div>
+                                YouTube広告
+                            </li>
+                            <li class="flex items-center text-sm text-gray-600">
+                                <div class="w-2 h-2 bg-primary-orange rounded-full mr-3"></div>
+                                ROI最適化
+                            </li>
+                        </ul>
+
+                        <a href="services.html#google-ads" class="block w-full bg-secondary-yellow text-white py-3 rounded-lg font-medium hover:bg-yellow-500 transition-colors duration-300 text-center">
+                            詳細を見る
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="text-center mt-16">
+                <div class="bg-gradient-to-r from-primary-orange to-primary-teal rounded-2xl p-8 md:p-12 text-white">
+                    <h3 class="text-2xl md:text-3xl font-bold mb-4">
+                        どのサービスが最適かわからない？
+                    </h3>
+                    <p class="text-lg mb-8 opacity-90">
+                        無料相談で、あなたのビジネスに最適なソリューションをご提案します
+                    </p>
+                    <a href="quote.html" class="inline-block bg-white text-gray-800 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors duration-300">
+                        見積もりを依頼する
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Works Section -->
+    <section id="works" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span class="text-gradient">実績</span>
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    様々な業界のクライアント様と共に築き上げた成功事例をご紹介します。
+                </p>
+            </div>
+
+            <!-- Stats Overview -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-bold text-primary-orange mb-2">200+</div>
+                    <div class="text-gray-600">成功プロジェクト</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-bold text-primary-teal mb-2">95%</div>
+                    <div class="text-gray-600">顧客満足度</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-bold text-secondary-yellow mb-2">300%</div>
+                    <div class="text-gray-600">平均成長率</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl md:text-4xl font-bold text-primary-orange mb-2">50+</div>
+                    <div class="text-gray-600">業界実績</div>
+                </div>
+            </div>
+
+
+
+            <!-- CTA -->
+            <div class="text-center">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg">
+                        <h3 class="text-xl font-bold mb-4 text-gray-800">
+                            もっと多くの成功事例を見る
+                        </h3>
+                        <p class="text-gray-600 mb-6">
+                            様々な業界での実績をご確認ください
+                        </p>
+                        <a href="works.html" class="bg-primary-teal text-white px-6 py-3 rounded-lg font-medium hover:bg-teal-600 transition-colors duration-300 shadow-lg hover:shadow-xl">
+                            実績一覧を見る
+                        </a>
+                    </div>
+                    <div class="bg-white rounded-2xl p-8 shadow-lg">
+                        <h3 class="text-xl font-bold mb-4 text-gray-800">
+                            あなたも成功事例の一つに
+                        </h3>
+                        <p class="text-gray-600 mb-6">
+                            無料相談で可能性を一緒に探りましょう
+                        </p>
+                        <a href="contact.html" class="bg-secondary-yellow text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-yellow-400 transition-colors duration-300 shadow-lg hover:shadow-xl">
+                            お問い合わせ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-gradient-to-br from-primary-orange to-primary-teal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-white space-y-8">
+                <!-- Main CTA -->
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6">
+                        私たちとご一緒に成功を。
+                    </h2>
+                    <p class="text-xl md:text-2xl mb-8 opacity-90">
+                        デジタルマーケティングで、あなたのビジネスを次のレベルへ
+                    </p>
+                    <p class="text-lg opacity-80 mb-12">
+                        無料相談では、現在の課題をヒアリングし、最適なソリューションをご提案いたします。<br>
+                        まずはお気軽にお問い合わせください。
+                    </p>
+                </div>
+
+                <!-- Contact Options -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                    <a href="contact.html" class="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-6 hover:bg-opacity-30 transition-all duration-300 group">
+                        <svg class="mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                        <h3 class="text-lg font-semibold mb-2">お問い合わせ</h3>
+                        <p class="text-sm opacity-80">いつでも受付中</p>
+                    </a>
+
+
+
+                    <a href="quote.html" class="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-6 hover:bg-opacity-30 transition-all duration-300 group">
+                        <svg class="mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                        <h3 class="text-lg font-semibold mb-2">見積もり依頼</h3>
+                        <p class="text-sm opacity-80">詳細な提案書</p>
+                    </a>
+                </div>
+
+
+
+                <!-- Additional Info -->
+                <div class="pt-8 border-t border-white border-opacity-20">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                        <div>
+                            <div class="text-2xl font-bold mb-2">無料</div>
+                            <div class="text-sm opacity-80">初回相談は完全無料</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold mb-2">迅速</div>
+                            <div class="text-sm opacity-80">スピード対応</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl font-bold mb-2">秘密厳守</div>
+                            <div class="text-sm opacity-80">NDA締結可能</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">M</span>
+                        </div>
+                        <span class="text-xl font-bold">MiniMaxAD</span>
+                    </div>
+                    <p class="text-gray-300 mb-4 leading-relaxed">
+                        最大の成果を、最小のコストで。SEO優化開発、SNS運営代行、Google広告代投放のプロフェッショナル集団。
+                        お客様のデジタルマーケティングを効率的に成功へ導きます。
+                    </p>
+                    <p class="text-gray-400 text-sm mb-4">
+                        関連会社：<a href="https://minimaxcode.com" class="text-primary-orange hover:text-orange-400 transition-colors">MiniMaxCode</a>
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary-orange transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary-orange transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary-orange transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">サービス</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="text-gray-300 hover:text-white transition-colors">SEO優化開発</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-white transition-colors">SNS運用代行</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-white transition-colors">Google広告の運用代行</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">会社情報</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors">会社概要</a></li>
+                        <li><a href="terms.html" class="text-gray-300 hover:text-white transition-colors">利用規約</a></li>
+                        <li><a href="privacy.html" class="text-gray-300 hover:text-white transition-colors">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2024 MiniMaxAD. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

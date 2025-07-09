@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プライバシーポリシー - MiniMaxAD</title>
+    <meta name="description" content="MiniMaxAD のプライバシーポリシーページ。個人情報の取り扱いについてご確認ください。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-orange': '#FF6B6B',
+                        'primary-teal': '#4ECDC4',
+                        'secondary-cream': '#FFF5E6',
+                        'secondary-yellow': '#FFD166',
+                    },
+                    fontFamily: {
+                        'noto': ['Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.6;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">M</span>
+                    </div>
+                    <span class="text-xl font-bold text-gray-800">MiniMaxCommercial</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">ホーム</a>
+                    <a href="index.html#services" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">サービス</a>
+                    <a href="works.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">実績</a>
+                    <a href="pricing.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">料金</a>
+                    <a href="about.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">会社概要</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">お問い合わせ</a>
+                    <a href="quote.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">見積もり</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="quote.html" class="bg-secondary-yellow text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-yellow-400 transition-colors duration-300 shadow-lg hover:shadow-xl">
+                        見積もり依頼
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="md:hidden" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden py-4 border-t hidden">
+                <nav class="flex flex-col space-y-4">
+                    <a href="index.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">ホーム</a>
+                    <a href="index.html#services" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">サービス</a>
+                    <a href="works.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">実績</a>
+                    <a href="pricing.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">料金</a>
+                    <a href="about.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">会社概要</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">お問い合わせ</a>
+                    <a href="quote.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">見積もり</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-secondary-cream to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                    <span class="text-gradient">プライバシーポリシー</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                    MiniMaxAD の個人情報の取り扱いについてご確認ください。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Content -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+                <div class="prose prose-lg max-w-none">
+                    <h2 class="text-2xl font-bold mb-6 text-gray-800">個人情報の取り扱いについて</h2>
+                    <p class="mb-6 text-gray-600">
+                        MiniMaxAD（以下「当社」といいます。）は、個人情報の重要性を認識し、個人情報の保護に関する法律（個人情報保護法）を遵守すると共に、以下のプライバシーポリシーに従って、個人情報を適切に取り扱います。
+                    </p>
+
+                    <h2 class="text-2xl font-bold mb-6 text-gray-800">1. 個人情報の定義</h2>
+                    <p class="mb-6 text-gray-600">
+                        本プライバシーポリシーにおいて、個人情報とは、個人情報保護法第2条第1項により定義された個人情報、すなわち、生存する個人に関する情報であって、当該情報に含まれる氏名、生年月日その他の記述等により特定の個人を識別することができるもの（他の情報と容易に照合することができ、それにより特定の個人を識別することができることとなるものを含む。）を指します。
+                    </p>
+
+                    <h2 class="text-2xl font-bold mb-6 text-gray-800">2. 個人情報の収集方法</h2>
+                    <p class="mb-6 text-gray-600">
+                        当社は、以下の方法により個人情報を収集いたします：
+                    </p>
+                    <ul class="mb-6 text-gray-600 list-disc pl-6">
+                        <li>お問い合わせフォームからの入力</li>
+                        <li>見積もり依頼フォームからの入力</li>
+                        <li>電話やメールでのお問い合わせ</li>
+                        <li>サービス契約時の書面による提供</li>
+                        <li>その他適法な方法による収集</li>
+                    </ul>
+
+                    <h2 class="text-2xl font-bold mb-6 text-gray-800">3. 個人情報の利用目的</h2>
+                    <p class="mb-6 text-gray-600">
+                        当社は、収集した個人情報を以下の目的で利用いたします：
+                    </p>
+                    <ul class="mb-6 text-gray-600 list-disc pl-6">
+                        <li>お問い合わせへの回答</li>
+                        <li>見積もりの作成・提供</li>
+                        <li>サービスの提供・運営</li>
+                        <li>契約の締結・履行</li>
+                        <li>料金の請求・決済</li>
+                        <li>サービス向上のための分析</li>
+                        <li>新サービス・キャンペーンのご案内</li>
+                        <li>法令に基づく対応</li>
+                    </ul>
+
+                    <h2 class="text-2xl font-bold mb-6 text-gray-800">4. 個人情報の第三者提供</h2>
+                    <p class="mb-6 text-gray-600">
+                        当社は、以下の場合を除き、個人情報を第三者に提供いたしません：
+                    </p>
+                    <ul class="mb-6 text-gray-600 list-disc pl-6">
+                        <li>ご本人の同意がある場合</li>
+                        <li>法令に基づく場合</li>
+                        <li>人の生命、身体または財産の保護のために必要がある場合</li>
+                        <li>公衆衛生の向上または児童の健全な育成の推進のために特に必要がある場合</li>
+                        <li>国の機関もしくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合</li>
+                    </ul>
+
+                    <h2 class="text-2xl font-bold mb-6 text-gray-800">5. 個人情報の管理</h2>
+                    <p class="mb-6 text-gray-600">
+                        当社は、個人情報の正確性を保ち、これを安全に管理いたします。個人情報の紛失、破壊、改ざん及び漏洩などを防止するため、必要かつ適切な安全管理措置を実施いたします。また、個人情報を取り扱う従業者や委託先に対して、必要かつ適切な監督を行います。
+                    </p>
+
+                    <h2 class="text-2xl font-bold mb-6 text-gray-800">6. 個人情報の開示・訂正等</h2>
+                    <p class="mb-6 text-gray-600">
+                        当社は、ご本人から個人情報の開示を求められたときは、遅滞なく開示いたします。ただし、開示することにより以下のいずれかに該当する場合は、その全部または一部を開示しないこともあります：
+                    </p>
+                    <ul class="mb-6 text-gray-600 list-disc pl-6">
+                        <li>ご本人または第三者の生命、身体、財産その他の権利利益を害するおそれがある場合</li>
+                        <li>当社の業務の適正な実施に著しい支障を及ぼすおそれがある場合</li>
+                        <li>法令に違反することとなる場合</li>
+                    </ul>
+
+                    <h2 class="text-2xl font-bold mb-6 text-gray-800">7. Cookieの使用について</h2>
+                    <p class="mb-6 text-gray-600">
+                        当社のウェブサイトでは、サービス向上のためCookieを使用する場合があります。Cookieとは、ウェブサイトがお客様のコンピュータに送信する小さなファイルで、お客様のブラウザに保存されます。Cookieの使用を希望されない場合は、ブラウザの設定でCookieを無効にすることができます。
+                    </p>
+
+                    <h2 class="text-2xl font-bold mb-6 text-gray-800">8. アクセス解析ツールについて</h2>
+                    <p class="mb-6 text-gray-600">
+                        当社のウェブサイトでは、Googleアナリティクス等のアクセス解析ツールを使用しています。これらのツールはCookieを使用してお客様の行動データを収集しますが、個人を特定する情報は含まれません。データの収集・処理方法については、各ツールの利用規約・プライバシーポリシーをご確認ください。
+                    </p>
+
+                    <h2 class="text-2xl font-bold mb-6 text-gray-800">9. プライバシーポリシーの変更</h2>
+                    <p class="mb-6 text-gray-600">
+                        当社は、法令の変更等に伴い、本プライバシーポリシーを変更することがあります。変更後のプライバシーポリシーについては、当社ウェブサイトに掲載した時から効力を生じるものとします。
+                    </p>
+
+                    <h2 class="text-2xl font-bold mb-6 text-gray-800">10. お問い合わせ窓口</h2>
+                    <p class="mb-6 text-gray-600">
+                        個人情報の取り扱いに関するお問い合わせは、以下の窓口までご連絡ください：
+                    </p>
+                    <div class="bg-gray-50 p-6 rounded-lg mb-6">
+                        <p class="text-gray-700">
+                            <strong>MiniMaxAD</strong><br>
+                            メールアドレス：info@minimaxad.com<br>
+                            受付時間：平日 9:00-18:00
+                        </p>
+                    </div>
+
+                    <div class="mt-12 pt-8 border-t border-gray-200">
+                        <p class="text-gray-500 text-sm">
+                            制定日：2024年1月1日<br>
+                            最終更新日：2024年1月1日
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">M</span>
+                        </div>
+                        <span class="text-xl font-bold">MiniMaxAD</span>
+                    </div>
+                    <p class="text-gray-300 mb-4 leading-relaxed">
+                        最大の成果を、最小のコストで。SEO優化開発と社交媒体運営代行のプロフェッショナル集団。
+                        お客様のデジタルマーケティングを効率的に成功へ導きます。
+                    </p>
+                    <p class="text-gray-400 text-sm mb-4">
+                        関連会社：<a href="https://minimaxcode.com" class="text-primary-orange hover:text-orange-400 transition-colors">MiniMaxCode</a>
+                    </p>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">サービス</h3>
+                    <ul class="space-y-2">
+                        <li><a href="services.html#seo" class="text-gray-300 hover:text-white transition-colors">SEO優化開発</a></li>
+                        <li><a href="services.html#sns" class="text-gray-300 hover:text-white transition-colors">SNS運営代行</a></li>
+                        <li><a href="services.html#google-ads" class="text-gray-300 hover:text-white transition-colors">Google広告代投放</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">会社情報</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors">会社概要</a></li>
+                        <li><a href="terms.html" class="text-gray-300 hover:text-white transition-colors">利用規約</a></li>
+                        <li><a href="privacy.html" class="text-primary-orange">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-6 mb-4">
+                    <a href="terms.html" class="text-gray-400 hover:text-white transition-colors text-sm">利用規約</a>
+                    <a href="privacy.html" class="text-primary-orange">プライバシーポリシー</a>
+                </div>
+                <p class="text-gray-400">© 2024 MiniMaxAD. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会社概要 - MiniMaxAD</title>
+    <meta name="description" content="MiniMaxAD の会社概要ページ。企業理念、会社情報、私たちの強みをご紹介します。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-orange': '#FF6B6B',
+                        'primary-teal': '#4ECDC4',
+                        'secondary-cream': '#FFF5E6',
+                        'secondary-yellow': '#FFD166',
+                    },
+                    fontFamily: {
+                        'noto': ['Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.6;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">M</span>
+                    </div>
+                    <span class="text-xl font-bold text-gray-800">MiniMaxAD</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">ホーム</a>
+                    <a href="services.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">サービス</a>
+                    <a href="works.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">実績</a>
+                    <a href="pricing.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">料金</a>
+                    <a href="about.html" class="text-primary-orange font-medium">会社概要</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">お問い合わせ</a>
+                    <a href="quote.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">見積もり</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="quote.html" class="bg-secondary-yellow text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-yellow-400 transition-colors duration-300 shadow-lg hover:shadow-xl">
+                        見積もり依頼
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="md:hidden" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden py-4 border-t hidden">
+                <nav class="flex flex-col space-y-4">
+                    <a href="index.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">ホーム</a>
+                    <a href="services.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">サービス</a>
+                    <a href="works.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">実績</a>
+                    <a href="pricing.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">料金</a>
+                    <a href="about.html" class="text-primary-orange font-medium">会社概要</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">お問い合わせ</a>
+                    <a href="quote.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">見積もり</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-secondary-cream to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                    <span class="text-gradient">会社概要</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                    MiniMaxADは、最大の成果を最小のコストで実現することを使命とする、<br>
+                    デジタルマーケティングのプロフェッショナル集団です。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Company Philosophy - Three Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center card-hover">
+                    <div class="w-16 h-16 bg-primary-orange rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="font-bold text-gray-800 mb-3 text-lg">効率性の追求</h4>
+                    <p class="text-gray-600 text-sm">最小のコストで最大の成果を実現し、お客様のROIを最大化します。</p>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center card-hover">
+                    <div class="w-16 h-16 bg-primary-teal rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 515.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 919.288 0M15 7a3 3 0 11-6 0 3 3 0 616 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="font-bold text-gray-800 mb-3 text-lg">パートナーシップ</h4>
+                    <p class="text-gray-600 text-sm">お客様と共に成長し、長期的な成功を目指します。</p>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 text-center card-hover">
+                    <div class="w-16 h-16 bg-secondary-yellow rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <h4 class="font-bold text-gray-800 mb-3 text-lg">Google広告の運用代行</h4>
+                    <p class="text-gray-600 text-sm">効果的な広告運用で確実な成果を実現し、ROIを最大化します。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Overview Section -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    <span class="text-gradient">会社概要</span>
+                </h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    MiniMaxADの詳細情報とアクセス方法をご確認ください。
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Company Information -->
+                <div class="bg-white rounded-2xl shadow-lg p-8 aspect-square flex flex-col">
+                    <h3 class="text-2xl font-bold mb-8 text-gray-800">会社情報</h3>
+                    <div class="flex-1 flex flex-col justify-between space-y-8 overflow-hidden">
+                        <!-- Company Basic Info -->
+                        <div class="space-y-6 pb-8 border-b border-gray-100">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600 font-medium text-base">会社名</span>
+                                <span class="text-gray-800 font-semibold text-base">MiniMaxAD</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600 font-medium text-base">電話番号</span>
+                                <span class="text-gray-800 text-base">080-8916-5438</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600 font-medium text-base">メール</span>
+                                <span class="text-gray-800 text-base truncate ml-3">info@minimaxad.com</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-600 font-medium text-base">関連会社</span>
+                                <span class="text-gray-800 text-base">
+                                    <a href="https://minimaxcode.com" class="text-primary-orange hover:text-orange-600 transition-colors">MiniMaxCode</a>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Access Information -->
+                        <div class="flex-1 space-y-6">
+                            <h4 class="text-lg font-semibold text-gray-800 mb-6">アクセス情報</h4>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <!-- Address -->
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-8 h-8 bg-primary-orange rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 616 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="min-w-0 flex-1">
+                                        <h5 class="font-semibold text-gray-800 mb-2 text-base">住所</h5>
+                                        <p class="text-gray-600 text-base leading-relaxed">〒111-0053<br>東京都台東区浅草橋4-15-5-301</p>
+                                    </div>
+                                </div>
+
+                                <!-- Business Hours -->
+                                <div class="flex items-start space-x-4">
+                                    <div class="w-8 h-8 bg-secondary-yellow rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="min-w-0 flex-1">
+                                        <h5 class="font-semibold text-gray-800 mb-2 text-base">営業時間</h5>
+                                        <p class="text-gray-600 text-base leading-relaxed">平日 9:00-18:00<br>土日祝日は休業</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Map Link -->
+                        <div class="pt-6 border-t border-gray-100">
+                            <a href="https://maps.google.com/?q=東京都台東区浅草橋4-15-5-301" target="_blank" class="inline-flex items-center space-x-3 bg-gradient-to-r from-primary-orange to-primary-teal text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 text-base">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 616 0z"></path>
+                                </svg>
+                                <span>地図を見る</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden aspect-square">
+                    <div class="w-full h-full bg-gray-200 relative">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.8!2d139.7844!3d35.6938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ea73ea6f4ff%3A0x1234567890abcdef!2z5p2x5Lqs6YO95Y-w5p2x5Yy65rWF6I2J5qmL77yU77yR77yV77yV77yT77yQ77yR!5e0!3m2!1sja!2sjp!4v1640995200000!5m2!1sja!2sjp&markers=color:red%7Clabel:M%7C35.6938,139.7844&disableDefaultUI=true&gestureHandling=cooperative"
+                            width="100%"
+                            height="100%"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            class="w-full h-full">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">M</span>
+                        </div>
+                        <span class="text-xl font-bold">MiniMaxAD</span>
+                    </div>
+                    <p class="text-gray-300 mb-4 leading-relaxed">
+                        最大の成果を、最小のコストで。SEO優化開発、SNS運営代行、Google広告代投放のプロフェッショナル集団。
+                        お客様のデジタルマーケティングを効率的に成功へ導きます。
+                    </p>
+                    <p class="text-gray-400 text-sm mb-4">
+                        関連会社：<a href="https://minimaxcode.com" class="text-primary-orange hover:text-orange-400 transition-colors">MiniMaxCode</a>
+                    </p>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">サービス</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html#services" class="text-gray-300 hover:text-white transition-colors">SEO優化開発</a></li>
+                        <li><a href="index.html#services" class="text-gray-300 hover:text-white transition-colors">SNS運営代行</a></li>
+                        <li><a href="index.html#services" class="text-gray-300 hover:text-white transition-colors">Google広告代投放</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">会社情報</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-primary-orange">会社概要</a></li>
+                        <li><a href="terms.html" class="text-gray-300 hover:text-white transition-colors">利用規約</a></li>
+                        <li><a href="privacy.html" class="text-gray-300 hover:text-white transition-colors">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">© 2024 MiniMaxAD. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

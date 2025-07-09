@@ -1,0 +1,9 @@
+{
+    "mcpServers": {
+        "serena": {
+            "command": "python",
+            "args": ["-m", "serena.mcp.server"],
+            "cwd": "G:\\minimaxad\\serena"
+        }
+    }
+} 

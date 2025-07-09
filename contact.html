@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ - MiniMaxAD</title>
+    <meta name="description" content="MiniMaxAD へのお問い合わせページ。SEO優化開発と社交媒体運営代行に関するご相談はこちらから。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-orange': '#FF6B6B',
+                        'primary-teal': '#4ECDC4',
+                        'secondary-cream': '#FFF5E6',
+                        'secondary-yellow': '#FFD166',
+                    },
+                    fontFamily: {
+                        'noto': ['Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.6;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">M</span>
+                    </div>
+                    <span class="text-xl font-bold text-gray-800">MiniMaxAD</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">ホーム</a>
+                    <a href="services.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">サービス</a>
+                    <a href="works.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">実績</a>
+                    <a href="pricing.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">料金</a>
+                    <a href="about.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">会社概要</a>
+                    <a href="contact.html" class="text-primary-orange font-medium">お問い合わせ</a>
+                    <a href="quote.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">見積もり</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="quote.html" class="bg-secondary-yellow text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-yellow-400 transition-colors duration-300 shadow-lg hover:shadow-xl">
+                        見積もり依頼
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="md:hidden" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden py-4 border-t hidden">
+                <nav class="flex flex-col space-y-4">
+                    <a href="index.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">ホーム</a>
+                    <a href="services.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">サービス</a>
+                    <a href="works.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">実績</a>
+                    <a href="pricing.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">料金</a>
+                    <a href="about.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">会社概要</a>
+                    <a href="contact.html" class="text-primary-orange font-medium">お問い合わせ</a>
+                    <a href="quote.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">見積もり</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-secondary-cream to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                    <span class="text-gradient">お問い合わせ</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                    SEO優化開発と社交媒体運営代行に関するご質問やご相談は、<br>
+                    お気軽にお問い合わせください。専門スタッフが丁寧にお答えいたします。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-white rounded-2xl shadow-lg p-10">
+                    <h2 class="text-2xl font-bold mb-8 text-gray-800">お問い合わせフォーム</h2>
+                    <form id="contactForm" class="space-y-6" action="mailto:info@minimaxad.com" method="post" enctype="text/plain">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">お名前 *</label>
+                                <input type="text" name="name" required placeholder="山田太郎" class="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-orange focus:border-transparent placeholder-gray-400">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">会社名</label>
+                                <input type="text" name="company" placeholder="株式会社サンプル" class="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-orange focus:border-transparent placeholder-gray-400">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">メールアドレス *</label>
+                                <input type="email" name="email" required placeholder="example@company.com" class="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-orange focus:border-transparent placeholder-gray-400">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">電話番号</label>
+                                <input type="tel" name="phone" placeholder="080-8916-5438" class="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-orange focus:border-transparent placeholder-gray-400">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">お問い合わせ種別 *</label>
+                            <select name="inquiry_type" required class="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-orange focus:border-transparent text-gray-400">
+                                <option value="" class="text-gray-400">お問い合わせ内容を選択してください</option>
+                                <option value="seo" class="text-gray-800">SEO優化開発について</option>
+                                <option value="sns" class="text-gray-800">SNS運営代行について</option>
+
+                                <option value="pricing" class="text-gray-800">料金について</option>
+                                <option value="other" class="text-gray-800">その他</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">お問い合わせ内容 *</label>
+                            <textarea name="message" required rows="6" class="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-orange focus:border-transparent placeholder-gray-400" placeholder="具体的なご質問やご要望をお聞かせください。&#10;例：&#10;・現在のウェブサイトのSEO改善について相談したい&#10;・Instagram運営代行の詳細な料金を知りたい&#10;・TikTokでの集客方法について教えてほしい"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-primary-orange text-white py-4 rounded-lg font-medium hover:bg-red-500 transition-colors duration-300 shadow-lg hover:shadow-xl">
+                            お問い合わせを送信
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <div class="bg-gradient-to-br from-primary-orange to-primary-teal rounded-2xl p-8 text-white">
+                        <h3 class="text-2xl font-bold mb-6">お気軽にご連絡ください</h3>
+                        <div class="space-y-4">
+
+
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="font-semibold">メールでのお問い合わせ</div>
+                                    <div class="text-sm opacity-90">info@minimaxad.com</div>
+                                    <div class="text-xs opacity-80">24時間受付</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Response Time -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8">
+                        <h3 class="text-xl font-bold mb-4 text-gray-800">対応時間について</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-primary-orange rounded-full"></div>
+                                <span class="text-gray-600">初回レスポンス：24時間以内</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-primary-teal rounded-full"></div>
+                                <span class="text-gray-600">詳細回答：2営業日以内</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <div class="w-2 h-2 bg-secondary-yellow rounded-full"></div>
+                                <span class="text-gray-600">無料相談：随時受付中</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="bg-secondary-cream rounded-2xl p-8 text-center">
+                        <h3 class="text-xl font-bold mb-4 text-gray-800">お急ぎの方は</h3>
+                        <p class="text-gray-600 mb-6">見積もり依頼フォームから<br>より詳細なご相談が可能です</p>
+                        <a href="quote.html" class="inline-block bg-secondary-yellow text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-yellow-400 transition-colors duration-300 shadow-lg hover:shadow-xl">
+                            見積もり依頼へ
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">M</span>
+                        </div>
+                        <span class="text-xl font-bold">MiniMaxAD</span>
+                    </div>
+                    <p class="text-gray-300 mb-4 leading-relaxed">
+                        最大の成果を、最小のコストで。SEO優化開発と社交媒体運営代行のプロフェッショナル集団。
+                        お客様のデジタルマーケティングを効率的に成功へ導きます。
+                    </p>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">サービス</h3>
+                    <ul class="space-y-2">
+                        <li><a href="services.html#seo" class="text-gray-300 hover:text-white transition-colors">SEO優化開発</a></li>
+                        <li><a href="services.html#sns" class="text-gray-300 hover:text-white transition-colors">SNS運営代行</a></li>
+                        <li><a href="services.html#google-ads" class="text-gray-300 hover:text-white transition-colors">Google広告代投放</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">会社情報</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors">会社概要</a></li>
+                        <li><a href="terms.html" class="text-gray-300 hover:text-white transition-colors">利用規約</a></li>
+                        <li><a href="privacy.html" class="text-gray-300 hover:text-white transition-colors">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">© 2024 MiniMaxAD. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Handle contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+            const data = {};
+            for (let [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+
+            // Create email content
+            const emailContent = `
+件名: お問い合わせ - ${data.inquiry_type || '未選択'}
+
+お名前: ${data.name || ''}
+会社名: ${data.company || ''}
+メールアドレス: ${data.email || ''}
+電話番号: ${data.phone || ''}
+お問い合わせ種別: ${data.inquiry_type || ''}
+
+お問い合わせ内容:
+${data.message || ''}
+
+---
+            このメールはMiniMaxADのお問い合わせフォームから送信されました。
+            `.trim();
+
+            // Create mailto link
+            const mailtoLink = `mailto:info@minimaxad.com?subject=${encodeURIComponent('お問い合わせ - ' + (data.inquiry_type || '未選択'))}&body=${encodeURIComponent(emailContent)}`;
+
+            // Open email client
+            window.location.href = mailtoLink;
+
+            // Show success message
+            alert('メールクライアントが開きます。送信を完了してください。');
+        });
+    </script>
+</body>
+</html>

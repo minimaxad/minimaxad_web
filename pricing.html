@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>料金 - MiniMaxAD</title>
+    <meta name="description" content="MiniMaxADの料金プラン。SEO優化開発、SNS運用代行、Google広告の運用代行の詳細料金をご確認ください。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-orange': '#FF6B6B',
+                        'primary-teal': '#4ECDC4',
+                        'secondary-cream': '#FFF5E6',
+                        'secondary-yellow': '#FFD166',
+                    },
+                    fontFamily: {
+                        'noto': ['Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.6;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        .strikethrough {
+            text-decoration: line-through;
+            color: #9CA3AF;
+        }
+        .hover-red-border {
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .hover-red-border:hover {
+            border-color: #EF4444;
+            box-shadow: 0 10px 25px -5px rgba(239, 68, 68, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">M</span>
+                    </div>
+                    <span class="text-xl font-bold text-gray-800">MiniMaxAD</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">ホーム</a>
+                    <a href="services.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">サービス</a>
+                    <a href="works.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">実績</a>
+                    <a href="pricing.html" class="text-primary-orange font-medium">料金</a>
+                    <a href="about.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">会社概要</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">お問い合わせ</a>
+                    <a href="quote.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">見積もり</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="quote.html" class="bg-secondary-yellow text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-yellow-400 transition-colors duration-300 shadow-lg hover:shadow-xl">
+                        見積もり依頼
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="md:hidden" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden py-4 border-t hidden">
+                <nav class="flex flex-col space-y-4">
+                    <a href="index.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">ホーム</a>
+                    <a href="services.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">サービス</a>
+                    <a href="works.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">実績</a>
+                    <a href="pricing.html" class="text-primary-orange font-medium">料金</a>
+                    <a href="about.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">会社概要</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">お問い合わせ</a>
+                    <a href="quote.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">見積もり</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-secondary-cream to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                    <span class="text-gradient">料金プラン</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                    透明性のある料金体系で、お客様のニーズに合わせた最適なプランをご提供します。<br>
+                    初期費用無料のプランもご用意しております。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Plans -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- SEO Plans -->
+            <div class="mb-20">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4 text-gray-800">SEO優化開発</h2>
+                    <p class="text-gray-600">検索エンジンで上位表示を実現するSEO戦略</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- SEO Consulting -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 card-hover hover-red-border">
+                        <div class="text-center mb-8">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">SEOコンサルティング</h3>
+                            <p class="text-gray-600 text-sm mb-4">戦略立案・改善提案</p>
+                            <div class="text-lg font-bold text-primary-orange mb-1">初期費用：¥100,000～</div>
+                            <div class="text-2xl font-bold text-primary-orange mb-2">¥100,000～500,000</div>
+                            <div class="text-gray-600 text-sm">月額（税別）</div>
+                        </div>
+                        
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-600">SEO戦略立案</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-600">競合分析・市場調査</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-600">改善提案・レポート</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-600">専属コンサルタント</span>
+                            </li>
+                        </ul>
+                        
+                        <a href="contact.html" class="w-full bg-red-500 text-white py-3 rounded-lg font-medium hover:bg-red-600 transition-colors duration-300 text-center block">
+                            相談する
+                        </a>
+                    </div>
+
+                    <!-- Internal SEO -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 card-hover hover-red-border relative">
+                        <div class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                            <span class="bg-primary-orange text-white px-4 py-1 rounded-full text-sm font-medium">人気</span>
+                        </div>
+                        
+                        <div class="text-center mb-8">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">内部SEO対策</h3>
+                            <p class="text-gray-600 text-sm mb-4">サイト内部の最適化</p>
+                            <div class="text-lg font-bold text-green-600 mb-1">初期費用：無料</div>
+                            <div class="text-2xl font-bold text-primary-orange mb-2">¥50,000～500,000</div>
+                            <div class="text-gray-600 text-sm">月額（税別）</div>
+                        </div>
+                        
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-600">テクニカルSEO</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-600">サイト構造最適化</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-600">ページ速度改善</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-600">モバイル対応</span>
+                            </li>
+                        </ul>
+                        
+                        <a href="contact.html" class="w-full bg-red-500 text-white py-3 rounded-lg font-medium hover:bg-red-600 transition-colors duration-300 text-center block">
+                            相談する
+                        </a>
+                    </div>
+
+                    <!-- Article Creation -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 card-hover hover-red-border">
+                        <div class="text-center mb-8">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">記事作成</h3>
+                            <p class="text-gray-600 text-sm mb-4">SEO記事・コンテンツ制作</p>
+                            <div class="text-lg font-bold text-primary-orange mb-1">文字単価：¥3～6</div>
+                            <div class="text-2xl font-bold text-primary-orange mb-2">¥30,000～50,000</div>
+                            <div class="text-gray-600 text-sm">1記事あたり（税別）</div>
+                        </div>
+                        
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-600">キーワード選定</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-600">SEO記事作成</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-600">画像・図表作成</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span class="text-gray-600">校正・編集</span>
+                            </li>
+                        </ul>
+                        
+                        <a href="contact.html" class="w-full bg-red-500 text-white py-3 rounded-lg font-medium hover:bg-red-600 transition-colors duration-300 text-center block">
+                            相談する
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SNS Plans -->
+            <div class="mb-20">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4 text-gray-800">SNS運用代行</h2>
+                    <p class="text-gray-600">Instagram・TikTokなどのSNS運営を代行</p>
+                </div>
+
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-white rounded-2xl shadow-lg p-8 hover-red-border">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                            <!-- Competitor Price -->
+                            <div class="text-center">
+                                <h3 class="text-lg font-semibold text-gray-600 mb-4">一般的な制作会社</h3>
+                                <div class="text-3xl font-bold strikethrough mb-2">¥200,000〜500,000</div>
+                                <div class="text-gray-500 text-sm">月額（税別）</div>
+                            </div>
+
+                            <!-- Our Price -->
+                            <div class="text-center">
+                                <h3 class="text-lg font-semibold text-primary-orange mb-4">MiniMaxAD</h3>
+                                <div class="text-3xl font-bold text-primary-orange mb-2">¥100,000〜250,000</div>
+                                <div class="text-gray-600 text-sm">月額（税別）</div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-8 border-t border-gray-100">
+                            <h4 class="text-lg font-semibold text-gray-800 mb-4 text-center">サービス内容</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <ul class="space-y-2">
+                                    <li class="flex items-center">
+                                        <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span class="text-gray-600 text-sm">Instagram・TikTok運営</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span class="text-gray-600 text-sm">コンテンツ企画・制作</span>
+                                    </li>
+                                </ul>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center">
+                                        <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span class="text-gray-600 text-sm">ハッシュタグ戦略</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span class="text-gray-600 text-sm">エンゲージメント向上</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 text-center">
+                            <a href="contact.html" class="bg-primary-teal text-white px-8 py-3 rounded-lg font-medium hover:bg-teal-600 transition-colors duration-300">
+                                相談する
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Google Ads Plans -->
+            <div class="mb-20">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4 text-gray-800">Google広告の運用代行</h2>
+                    <p class="text-gray-600">効果的な広告運用で確実な成果を実現</p>
+                </div>
+
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-white rounded-2xl shadow-lg p-8 hover-red-border">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                            <!-- Competitor Price -->
+                            <div class="text-center">
+                                <h3 class="text-lg font-semibold text-gray-600 mb-4">一般的な制作会社</h3>
+                                <div class="text-2xl font-bold strikethrough mb-1">¥200,000〜500,000</div>
+                                <div class="text-lg font-bold strikethrough mb-2">広告費の20%</div>
+                                <div class="text-gray-500 text-sm">月額（税別）</div>
+                            </div>
+
+                            <!-- Our Price -->
+                            <div class="text-center">
+                                <h3 class="text-lg font-semibold text-primary-orange mb-4">MiniMaxAD</h3>
+                                <div class="text-2xl font-bold text-primary-orange mb-1">¥100,000〜250,000</div>
+                                <div class="text-xl font-bold text-primary-orange mb-2">広告費の10%</div>
+                                <div class="text-gray-600 text-sm">月額（税別）</div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-8 border-t border-gray-100">
+                            <h4 class="text-lg font-semibold text-gray-800 mb-4 text-center">サービス内容</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <ul class="space-y-2">
+                                    <li class="flex items-center">
+                                        <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span class="text-gray-600 text-sm">Google検索広告</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span class="text-gray-600 text-sm">ディスプレイ広告</span>
+                                    </li>
+                                </ul>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center">
+                                        <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span class="text-gray-600 text-sm">YouTube広告</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="w-4 h-4 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                        </svg>
+                                        <span class="text-gray-600 text-sm">ROI最適化</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 text-center">
+                            <a href="contact.html" class="bg-secondary-yellow text-gray-800 px-8 py-3 rounded-lg font-medium hover:bg-yellow-500 transition-colors duration-300">
+                                相談する
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-br from-primary-orange to-primary-teal">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                お客様に最適なプランを<br>ご提案いたします
+            </h2>
+            <p class="text-lg text-white opacity-90 mb-8 max-w-2xl mx-auto">
+                ご予算やご要望に応じて、カスタマイズしたプランもご用意可能です。まずはお気軽にご相談ください。
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="quote.html" class="bg-white text-gray-800 px-8 py-4 rounded-lg font-medium hover:bg-gray-100 transition-colors duration-300 shadow-lg">
+                    見積もり依頼
+                </a>
+                <a href="contact.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-medium hover:bg-white hover:text-gray-800 transition-colors duration-300">
+                    お問い合わせ
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">M</span>
+                        </div>
+                        <span class="text-xl font-bold">MiniMaxAD</span>
+                    </div>
+                    <p class="text-gray-300 mb-4 leading-relaxed">
+                        最大の成果を、最小のコストで。SEO優化開発、SNS運用代行、Google広告の運用代行のプロフェッショナル集団。
+                        お客様のデジタルマーケティングを効率的に成功へ導きます。
+                    </p>
+                    <p class="text-gray-400 text-sm mb-4">
+                        関連会社：<a href="https://minimaxcode.com" class="text-primary-orange hover:text-orange-400 transition-colors">MiniMaxCode</a>
+                    </p>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">サービス</h3>
+                    <ul class="space-y-2">
+                        <li><a href="services.html#seo" class="text-gray-300 hover:text-white transition-colors">SEO優化開発</a></li>
+                        <li><a href="services.html#sns" class="text-gray-300 hover:text-white transition-colors">SNS運用代行</a></li>
+                        <li><a href="services.html#google-ads" class="text-gray-300 hover:text-white transition-colors">Google広告の運用代行</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">会社情報</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors">会社概要</a></li>
+                        <li><a href="terms.html" class="text-gray-300 hover:text-white transition-colors">利用規約</a></li>
+                        <li><a href="privacy.html" class="text-gray-300 hover:text-white transition-colors">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">© 2024 MiniMaxAD. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

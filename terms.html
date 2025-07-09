@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>利用規約 - MiniMaxAD</title>
+    <meta name="description" content="MiniMaxAD の利用規約ページ。サービス利用に関する規約をご確認ください。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-orange': '#FF6B6B',
+                        'primary-teal': '#4ECDC4',
+                        'secondary-cream': '#FFF5E6',
+                        'secondary-yellow': '#FFD166',
+                    },
+                    fontFamily: {
+                        'noto': ['Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.6;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">M</span>
+                    </div>
+                    <span class="text-xl font-bold text-gray-800">MiniMaxCommercial</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">ホーム</a>
+                    <a href="index.html#services" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">サービス</a>
+                    <a href="works.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">実績</a>
+                    <a href="pricing.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">料金</a>
+                    <a href="about.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">会社概要</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">お問い合わせ</a>
+                    <a href="quote.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">見積もり</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="quote.html" class="bg-secondary-yellow text-gray-800 px-6 py-3 rounded-lg font-medium hover:bg-yellow-400 transition-colors duration-300 shadow-lg hover:shadow-xl">
+                        見積もり依頼
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button class="md:hidden" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden py-4 border-t hidden">
+                <nav class="flex flex-col space-y-4">
+                    <a href="index.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">ホーム</a>
+                    <a href="index.html#services" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">サービス</a>
+                    <a href="works.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">実績</a>
+                    <a href="pricing.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">料金</a>
+                    <a href="about.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">会社概要</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">お問い合わせ</a>
+                    <a href="quote.html" class="text-gray-600 hover:text-primary-orange transition-colors duration-300 font-medium">見積もり</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-gradient-to-br from-secondary-cream to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                    <span class="text-gradient">利用規約</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                    MiniMaxAD のサービス利用に関する規約をご確認ください。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms Content -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+                <div class="prose prose-lg max-w-none">
+                    <h2 class="text-2xl font-bold mb-6 text-gray-800">第1条（適用）</h2>
+                    <p class="mb-6 text-gray-600">
+                        本規約は、MiniMaxAD（以下「当社」といいます。）が提供するSEO優化開発・社交媒体運営代行サービス（以下「本サービス」といいます。）の利用条件を定めるものです。利用者（以下「ユーザー」といいます。）は、本サービスを利用することによって、本規約に同意したものとみなします。
+                    </p>
+
+                    <h2 class="text-2xl font-bold mb-6 text-gray-800">第2条（利用登録）</h2>
+                    <p class="mb-6 text-gray-600">
+                        本サービスの利用を希望する方は、本規約に同意の上、当社の定める方法によって利用申込を行うものとします。当社は、利用申込を行った方（以下「申込者」といいます。）が以下の事由に該当する場合には、利用登録を承認しないことがあります。
+                    </p>
+                    <ul class="mb-6 text-gray-600 list-disc pl-6">
+                        <li>申込者が本規約に違反したことがある場合</li>
+                        <li>申込者が反社会的勢力等である、または反社会的勢力等との何らかの交流もしくは関与がある場合</li>
+                        <li>その他、当社が利用登録を相当でないと判断した場合</li>
+                    </ul>
+
+                    <h2 class="text-2xl font-bold mb-6 text-gray-800">第3条（サービス内容）</h2>
+                    <p class="mb-6 text-gray-600">
+                        当社は、以下のサービスを提供します：
+                    </p>
+                    <ul class="mb-6 text-gray-600 list-disc pl-6">
+                        <li>SEO優化開発サービス</li>
+                        <li>Instagram運営代行サービス</li>
+                        <li>TikTok運営代行サービス</li>
+                        <li>デジタルマーケティング戦略立案・実行</li>
+                        <li>その他関連するサービス</li>
+                    </ul>
+
+                    <h2 class="text-2xl font-bold mb-6 text-gray-800">第4条（利用料金及び支払方法）</h2>
+                    <p class="mb-6 text-gray-600">
+                        ユーザーは、本サービスの利用の対価として、当社が別途定め、本ウェブサイトに表示する利用料金を、当社が指定する方法により支払うものとします。利用料金の支払いが遅滞した場合には、ユーザーは年14.6％の割合による遅延損害金を支払うものとします。
+                    </p>
+
+                    <h2 class="text-2xl font-bold mb-6 text-gray-800">第5条（禁止事項）</h2>
+                    <p class="mb-6 text-gray-600">
+                        ユーザーは、本サービスの利用にあたり、以下の行為をしてはなりません：
+                    </p>
+                    <ul class="mb-6 text-gray-600 list-disc pl-6">
+                        <li>法令または公序良俗に違反する行為</li>
+                        <li>犯罪行為に関連する行為</li>
+                        <li>当社、本サービスの他のユーザー、または第三者のサーバーまたはネットワークの機能を破壊したり、妨害したりする行為</li>
+                        <li>当社のサービスの運営を妨害するおそれのある行為</li>
+                        <li>他のユーザーに関する個人情報等を収集または蓄積する行為</li>
+                        <li>不正アクセスをし、またはこれを試みる行為</li>
+                        <li>他のユーザーに成りすます行為</li>
+                        <li>当社のサービスに関連して、反社会的勢力に対して直接または間接に利益を供与する行為</li>
+                        <li>その他、当社が不適切と判断する行為</li>
+                    </ul>
+
+                    <h2 class="text-2xl font-bold mb-6 text-gray-800">第6条（本サービスの提供の停止等）</h2>
+                    <p class="mb-6 text-gray-600">
+                        当社は、以下のいずれかの事由があると判断した場合、ユーザーに事前に通知することなく本サービスの全部または一部の提供を停止または中断することができるものとします：
+                    </p>
+                    <ul class="mb-6 text-gray-600 list-disc pl-6">
+                        <li>本サービスにかかるコンピュータシステムの保守点検または更新を行う場合</li>
+                        <li>地震、落雷、火災、停電または天災などの不可抗力により、本サービスの提供が困難となった場合</li>
+                        <li>コンピュータまたは通信回線等が事故により停止した場合</li>
+                        <li>その他、当社が本サービスの提供が困難と判断した場合</li>
+                    </ul>
+
+                    <h2 class="text-2xl font-bold mb-6 text-gray-800">第7条（保証の否認及び免責事項）</h2>
+                    <p class="mb-6 text-gray-600">
+                        当社は、本サービスに事実上または法律上の瑕疵（安全性、信頼性、正確性、完全性、有効性、特定の目的への適合性、セキュリティなどに関する欠陥、エラーやバグ、権利侵害などを含みます。）がないことを明示的にも黙示的にも保証しておりません。
+                    </p>
+
+                    <h2 class="text-2xl font-bold mb-6 text-gray-800">第8条（サービス内容の変更等）</h2>
+                    <p class="mb-6 text-gray-600">
+                        当社は、ユーザーに通知することなく、本サービスの内容を変更しまたは本サービスの提供を中止することができるものとし、これによってユーザーに生じた損害について一切の責任を負いません。
+                    </p>
+
+                    <h2 class="text-2xl font-bold mb-6 text-gray-800">第9条（利用規約の変更）</h2>
+                    <p class="mb-6 text-gray-600">
+                        当社は、必要と判断した場合には、ユーザーに通知することなくいつでも本規約を変更することができるものとします。なお、本規約の変更後、本サービスの利用を開始した場合には、当該ユーザーは変更後の規約に同意したものとみなします。
+                    </p>
+
+                    <h2 class="text-2xl font-bold mb-6 text-gray-800">第10条（個人情報の取扱い）</h2>
+                    <p class="mb-6 text-gray-600">
+                        当社は、本サービスの利用によって取得する個人情報については、当社「プライバシーポリシー」に従い適切に取り扱うものとします。
+                    </p>
+
+                    <h2 class="text-2xl font-bold mb-6 text-gray-800">第11条（通知または連絡）</h2>
+                    <p class="mb-6 text-gray-600">
+                        ユーザーと当社との間の通知または連絡は、当社の定める方法によって行うものとします。当社は、ユーザーから、当社が別途定める方式に従った変更届け出がない限り、現在登録されている連絡先が有効なものとみなして当該連絡先へ通知または連絡を行い、これらは、発信時にユーザーへ到達したものとみなします。
+                    </p>
+
+                    <h2 class="text-2xl font-bold mb-6 text-gray-800">第12条（権利義務の譲渡の禁止）</h2>
+                    <p class="mb-6 text-gray-600">
+                        ユーザーは、当社の書面による事前の承諾なく、利用契約上の地位または本規約に基づく権利もしくは義務を第三者に譲渡し、または担保に供することはできません。
+                    </p>
+
+                    <h2 class="text-2xl font-bold mb-6 text-gray-800">第13条（準拠法・裁判管轄）</h2>
+                    <p class="mb-6 text-gray-600">
+                        本規約の解釈にあたっては、日本法を準拠法とします。本サービスに関して紛争が生じた場合には、当社の本店所在地を管轄する裁判所を専属的合意管轄とします。
+                    </p>
+
+                    <div class="mt-12 pt-8 border-t border-gray-200">
+                        <p class="text-gray-500 text-sm">
+                            制定日：2024年1月1日<br>
+                            最終更新日：2024年1月1日
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-xl">M</span>
+                        </div>
+                        <span class="text-xl font-bold">MiniMaxAD</span>
+                    </div>
+                    <p class="text-gray-300 mb-4 leading-relaxed">
+                        最大の成果を、最小のコストで。SEO優化開発と社交媒体運営代行のプロフェッショナル集団。
+                        お客様のデジタルマーケティングを効率的に成功へ導きます。
+                    </p>
+                    <p class="text-gray-400 text-sm mb-4">
+                        関連会社：<a href="https://minimaxcode.com" class="text-primary-orange hover:text-orange-400 transition-colors">MiniMaxCode</a>
+                    </p>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">サービス</h3>
+                    <ul class="space-y-2">
+                        <li><a href="services.html#seo" class="text-gray-300 hover:text-white transition-colors">SEO優化開発</a></li>
+                        <li><a href="services.html#sns" class="text-gray-300 hover:text-white transition-colors">SNS運営代行</a></li>
+                        <li><a href="services.html#google-ads" class="text-gray-300 hover:text-white transition-colors">Google広告代投放</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Info -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">会社情報</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors">会社概要</a></li>
+                        <li><a href="terms.html" class="text-primary-orange">利用規約</a></li>
+                        <li><a href="privacy.html" class="text-gray-300 hover:text-white transition-colors">プライバシーポリシー</a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-6 mb-4">
+                    <a href="terms.html" class="text-primary-orange">利用規約</a>
+                    <a href="privacy.html" class="text-gray-400 hover:text-white transition-colors text-sm">プライバシーポリシー</a>
+                </div>
+                <p class="text-gray-400">© 2024 MiniMaxAD. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

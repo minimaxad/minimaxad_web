@@ -1,0 +1,6 @@
+@echo off
+echo Starting SEO Masters Website...
+echo Opening in default browser...
+start index.html
+echo Website opened successfully!
+pause
