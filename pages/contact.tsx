@@ -37,6 +37,7 @@ const Contact: React.FC = () => {
     } catch (error) {
       alert('サーバーエラーが発生しました。');
     }
+  }
 
   return (
     <>
@@ -44,7 +45,6 @@ const Contact: React.FC = () => {
         <title>お問い合わせ - MiniMaxAD</title>
         <meta name="description" content="MiniMaxAD へのお問い合わせページ。SEO対策と社交媒体運営代行に関するご相談はこちらから。" />
       </Head>
-      
       <Layout>
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-br from-secondary-cream to-white">
@@ -208,3 +208,4 @@ const Contact: React.FC = () => {
 }
 
 export default Contact
+
