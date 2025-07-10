@@ -8,7 +8,7 @@ const Pricing: React.FC = () => {
     <>
       <Head>
         <title>料金 - MiniMaxAD</title>
-        <meta name="description" content="MiniMaxADの料金プラン。SEO優化開発、SNS運用代行、Google広告の運用代行の詳細料金をご確認ください。" />
+        <meta name="description" content="MiniMaxADの料金プラン。SEO対策、SNS運用代行、Google広告の運用代行の詳細料金をご確認ください。" />
       </Head>
       
       <Layout>
@@ -35,9 +35,9 @@ const Pricing: React.FC = () => {
               <p className="text-gray-600">MiniMaxADは業界標準よりも高品質・低コストでご提供します</p>
             </div>
             <div className="space-y-12">
-              {/* SEO優化開発 */}
+              {/* SEO対策 */}
               <div>
-                <h3 className="text-2xl font-bold mb-2 text-gray-800 text-center">SEO優化開発</h3>
+                <h3 className="text-2xl font-bold mb-2 text-gray-800 text-center">SEO対策</h3>
                 <p className="text-gray-600 mb-4 text-center">検索エンジンで上位表示を実現するSEO戦略</p>
                 <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 border border-orange-200 flex flex-col items-center" style={{boxShadow:'0 4px 24px 0 rgba(255,107,107,0.08)'}}>
                   <div className="w-full flex flex-col md:flex-row justify-between items-stretch gap-8">

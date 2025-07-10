@@ -37,13 +37,12 @@ const Contact: React.FC = () => {
     } catch (error) {
       alert('サーバーエラーが発生しました。');
     }
-  }
 
   return (
     <>
       <Head>
         <title>お問い合わせ - MiniMaxAD</title>
-        <meta name="description" content="MiniMaxAD へのお問い合わせページ。SEO優化開発と社交媒体運営代行に関するご相談はこちらから。" />
+        <meta name="description" content="MiniMaxAD へのお問い合わせページ。SEO対策と社交媒体運営代行に関するご相談はこちらから。" />
       </Head>
       
       <Layout>
@@ -55,7 +54,7 @@ const Contact: React.FC = () => {
                 <span className="text-gradient">お問い合わせ</span>
               </h1>
               <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-                SEO優化開発と社交媒体運営代行に関するご質問やご相談は、<br />
+                SEO対策と社交媒体運営代行に関するご質問やご相談は、<br />
                 お気軽にお問い合わせください。専門スタッフが丁寧にお答えいたします。
               </p>
             </div>
@@ -64,10 +63,10 @@ const Contact: React.FC = () => {
 
         {/* Contact Form Section */}
         <section className="py-16 md:py-24 bg-white">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Contact Form */}
-              <div className="bg-white rounded-2xl shadow-lg p-10">
+              <div className="bg-white rounded-2xl shadow-lg p-10 w-full">
                 <h2 className="text-2xl font-bold mb-8 text-gray-800">お問い合わせフォーム</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -99,15 +98,7 @@ const Contact: React.FC = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">メールアドレス *</label>
-                      <input
-                        type="email"
-                        name="email"
-                        required
-                        value={formData.email}
-                        onChange={handleChange}
-                        className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-orange focus:border-transparent placeholder-gray-400"
-                        placeholder="example@company.com"
-                      />
+                      <input type="email" name="email" required value={formData.email} onChange={handleChange} className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-orange focus:border-transparent placeholder-gray-400" placeholder="example@company.com" />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">電話番号</label>
@@ -129,10 +120,10 @@ const Contact: React.FC = () => {
                       required
                       value={formData.inquiry_type}
                       onChange={handleChange}
-                      className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-orange focus:border-transparent text-gray-400"
+                      className={`w-full px-4 py-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-orange focus:border-transparent ${formData.inquiry_type ? 'text-gray-800' : 'text-gray-400'}` }
                     >
                       <option value="" className="text-gray-400">お問い合わせ内容を選択してください</option>
-                      <option value="seo" className="text-gray-800">SEO優化開発について</option>
+                      <option value="seo" className="text-gray-800">SEO対策について</option>
                       <option value="instagram" className="text-gray-800">Instagram運営代行について</option>
                       <option value="tiktok" className="text-gray-800">TikTok運営代行について</option>
                       <option value="pricing" className="text-gray-800">料金について</option>

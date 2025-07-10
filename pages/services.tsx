@@ -8,7 +8,7 @@ const Services: React.FC = () => {
     <>
       <Head>
         <title>サービス - MiniMaxAD</title>
-        <meta name="description" content="MiniMaxADのサービス詳細。SEO優化開発、SNS運営代行、Google広告代投放の実績と特徴をご紹介します。" />
+        <meta name="description" content="MiniMaxADのサービス詳細。SEO対策、SNS運営代行、Google広告代投放の実績と特徴をご紹介します。" />
       </Head>
       
       <Layout>
@@ -21,7 +21,7 @@ const Services: React.FC = () => {
               </h1>
               <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
                 MiniMaxADが提供する3つの核心サービス。
-                SEO優化開発、SNS運営代行、Google広告代投放で、お客様のデジタルマーケティングを成功に導きます。
+                SEO対策、SNS運営代行、Google広告代投放で、お客様のデジタルマーケティングを成功に導きます。
               </p>
             </div>
           </div>
@@ -36,7 +36,7 @@ const Services: React.FC = () => {
                 <div className="w-20 h-20 bg-primary-orange rounded-full flex items-center justify-center mx-auto mb-6">
                   <Search className="w-10 h-10 text-white" />
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">SEO優化開発</h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">SEO対策</h2>
                 <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                   検索エンジンでの上位表示を実現し、質の高いオーガニックトラフィックを獲得します。
                 </p>

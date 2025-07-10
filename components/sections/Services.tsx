@@ -5,7 +5,7 @@ const Services: React.FC = () => {
   const services = [
     {
       icon: Search,
-      title: 'SEO優化開発',
+      title: 'SEO対策',
       description: 'Googleアルゴリズムに最適化されたSEO戦略で、検索順位を向上させます。',
       features: ['キーワード分析', 'コンテンツ最適化', 'テクニカルSEO', 'レポート分析'],
       color: 'bg-primary-orange',
@@ -38,7 +38,7 @@ const Services: React.FC = () => {
             <span className="text-gradient">サービス</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            SEO優化開発から社交媒体運営まで、デジタルマーケティングの全領域をカバーする包括的なサービスを提供します。
+            SEO対策から社交媒体運営まで、デジタルマーケティングの全領域をカバーする包括的なサービスを提供します。
           </p>
         </div>
 

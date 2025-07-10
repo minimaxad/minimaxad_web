@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
               <span className="text-xl font-bold">MiniMaxAD</span>
             </div>
             <p className="text-gray-300 mb-4 leading-relaxed">
-              最大の成果を、最小のコストで。SEO優化開発、SNS運営代行、Google広告代投放のプロフェッショナル集団。
+              最大の成果を、最小のコストで。SEO対策、SNS運営代行、Google広告代投放のプロフェッショナル集団。
               お客様のデジタルマーケティングを効率的に成功へ導きます。
             </p>
             
@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">サービス</h3>
             <ul className="space-y-2">
-              <li><Link href="#services" className="text-gray-300 hover:text-white transition-colors">SEO優化開発</Link></li>
+              <li><Link href="#services" className="text-gray-300 hover:text-white transition-colors">SEO対策</Link></li>
               <li><Link href="#services" className="text-gray-300 hover:text-white transition-colors">SNS運用代行</Link></li>
               <li><Link href="#services" className="text-gray-300 hover:text-white transition-colors">Google広告の運用代行</Link></li>
             </ul>
